@@ -14,6 +14,10 @@ const apiRoutes = require('./routes/apiRoutes');
 // add new id to note
 
 
+//conected to apiRoutes doc
+app.get('/api/apiRoutes', (req, res) => {
+    res.json(apiRoutes);
+})
 
 // sets up the server
 app.listen(3001, () => {
