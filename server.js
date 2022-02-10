@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const { notes } = require('./Develop/data/notes.json');
 
 
 // express app
@@ -12,21 +13,26 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 // set up route files = api routes
-const notes = require('./routes/notes');
+
 
 // get notes from api/notes
 // add new note to api file (JSON db file)
 // add new id to note
 
 
-//conected to apiNotes doc
+//conected to notes array
 app.get('/api/notes', (req, res) => {
     res.json(notes);
 })
 
-//post to notes doc
+//post to notes array
 app.post('/api/notes', (req, res) => {
     console.log(req.body);
+    res.json(req.body);
+})
+
+// delete notes 
+app.delete('/api/notes', (req,res)=> {
     res.json(req.body);
 })
 
