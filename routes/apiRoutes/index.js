@@ -1,11 +1,10 @@
 const router = require('express').Router();
-const { AsyncResource } = require('async_hooks');
 const fs = require('fs');
-// const { notes } = require('../../data/notes.json');
+// const { notes } = require('notes.json');
 
 //conected to notes array
-router.get('/notes', (req, res) => {
-    fs.readFile('../../data/notes.json', 'utf8', (err, data) => {
+router.get('/api/notes', (req, res) => {
+    fs.readFile('./data/notes.json', 'utf8', (err, data) => {
         if (err) {
             console.log(err);
         } else {
