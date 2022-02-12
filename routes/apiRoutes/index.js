@@ -15,34 +15,41 @@ router.get('/notes', (req, res) => {
         // let results = notes;
         // console.log(results);
         res.json(JSON.parse(data));
+
+        console.log(JSON.parse(data));
     })
 });
 
-//post to notes file then return new note to client
-router.post('/notes', (req, res) => {
-    // res.json(req.body);
-    const newNote = req.body;
-    newNote.id = uuidv4();
+// //post to notes file then return new note to client
+// router.post('/notes', (req, res) => {
+//     // res.json(req.body);
+//     const newNote = req.body;
+//     newNote.id = uuidv4();
 
-    // read file
-    let data = notes;
-    console.log(data);
-    
-    //add to notes file
-    data.push(newNote);
+//     // const data = notes;
 
-    // write file
-    fs.writeFile(path.join(__dirname,'../../data/notes.json'), JSON.stringify(data), (err) => {
-        if (err) throw err;
-    });
+//     // read file
+//     fs.readFile(path.join(__dirname,'../../data/notes.json'), (err, data) => {
+//         res.json(JSON.parse(data));
 
-    // send response
-    res.json(data);
-})
+//         console.log(JSON.parse(data));
+//     })
+          
+//     //add to notes file
+//     data.push(newNote);
+
+//     // write file
+//     fs.writeFile(path.join(__dirname,'../../data/notes.json'), JSON.stringify(data), (err) => {
+//         if (err) throw err;
+//     });
+
+//     // send response
+//     res.json(data);
+// })
 
 // *BONUS* delete note from array 
-router.delete('/notes', (req,res)=> {
-    res.json(req.body);
-})
+// router.delete('/notes', (req,res)=> {
+//     res.json(req.body);
+// })
 
 module.exports = router;
