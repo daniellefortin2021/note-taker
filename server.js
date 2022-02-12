@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3001;
 // const { notes } = require('./data/notes.json');
 
 const apiRoutes = require('./routes/apiRoutes');
-// const htmlRoutes = require('./routes/htmlRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 // express app
 const app = express();
@@ -14,9 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 //parse incoming JSON data
 app.use(express.json());
+app.use(express.static('public'));
 
 app.use('/', apiRoutes);
-// app.use('/', htmlRoutes)
+app.use('/', htmlRoutes)
 
 
 // sets up the server
