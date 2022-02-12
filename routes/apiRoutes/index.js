@@ -9,7 +9,7 @@ const { v4: uuidv4 } = require('uuid');
 const { notes } = require('../../data/notes.json');
 
 //conected to notes array
-router.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
     fs.readFile(path.join(__dirname,'../../data/notes.json'), (err, data) => {
 
         // let results = notes;
@@ -19,7 +19,7 @@ router.get('/api/notes', (req, res) => {
 });
 
 //post to notes file then return new note to client
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     // res.json(req.body);
     const newNote = req.body;
     newNote.id = uuidv4();
