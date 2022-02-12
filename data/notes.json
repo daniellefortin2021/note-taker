@@ -1,15 +1,1 @@
-{
-   "notes": [
-        {
-            "title":"Test Title",
-            "text":"Test text",
-            "id": 1
-        },
-        {
-            "title":"Test Title 2",
-            "text":"Test text 2",
-            "id": 2
-        }
-
-]
-}
+[{"title":"Test Title","text":"Test text","id":1},{"title":"Test Title 2","text":"Test text 2","id":2},{"title":"sdfsdf","text":"sdfsdf","id":"58504471-0c0c-4c19-af81-735bcc6e6255"}]
