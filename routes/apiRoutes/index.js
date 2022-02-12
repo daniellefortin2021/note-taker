@@ -10,9 +10,12 @@ const { notes } = require('../../data/notes.json');
 
 //conected to notes array
 router.get('/api/notes', (req, res) => {
-    let results = notes;
-    // console.log(results);
-    res.json(results);
+    fs.readFile(path.join(__dirname,'../../data/notes.json'), (err, data) => {
+
+        // let results = notes;
+        // console.log(results);
+        res.json(JSON.parse(data));
+    })
 });
 
 //post to notes file then return new note to client
