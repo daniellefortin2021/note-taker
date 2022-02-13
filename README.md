@@ -20,7 +20,5 @@ This aplication allows users to write and save notes. It uses an Express.js back
 ## Link
 https://pacific-woodland-42612.herokuapp.com/
 
-## Usage
-
 ## License
 This project is licensed under MIT.
