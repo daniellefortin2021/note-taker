@@ -45,8 +45,16 @@ router.post('/notes', (req, res) => {
 })
 
 // *BONUS* delete note from array 
-router.delete('/notes', (req,res)=> {
-    res.json(req.body);
+router.delete('/notes/:id', (req,res)=> {
+    // res.json(req.body);
+
+    // get id
+
+    //read file 
+
+    // get rid of id from file 
+
+    //write data to file 
 })
 
 module.exports = router;
