@@ -5,7 +5,6 @@ This aplication allows users to write and save notes. It uses an Express.js back
 * Languages
 * Link
 * Preview
-* Usage
 * License
 
 ## Languages
